@@ -1,7 +1,9 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import LatestMatch from '../LatestMatch'
 import MatchCard from '../MatchCard'
+import PieCharts from '../PieCharts'
 import './index.css'
 
 const bgColorList = [
@@ -71,19 +73,41 @@ class TeamMatches extends Component {
     return filteredColor[0].bg
   }
 
+  generatePiechartValue = value => {
+    const {teamMatch} = this.state
+    const {latestMtchDetails, recentMatches} = teamMatch
+    const latestMatchCount = latestMtchDetails.matchStatus === value ? 1 : 0
+    const result =
+      recentMatches.filter(eachMatch => eachMatch.matchStatus === value)
+        .length + latestMatchCount
+    return result
+  }
+
+  generatePiechartData = () => [
+    {id: 'Won', value: this.generatePiechartValue('Won')},
+    {id: 'Lost', value: this.generatePiechartValue('Lost')},
+    {id: 'Drawn', value: this.generatePiechartValue('Drawn')},
+  ]
+
   renderTeamMatch = () => {
     const {teamMatch} = this.state
     const {teamBannerUrl, latestMtchDetails, recentMatches} = teamMatch
-    console.log(recentMatches)
     return (
       <>
         <img src={teamBannerUrl} alt="team banner" className="banner-img" />
         <LatestMatch dataLatest={latestMtchDetails} />
+        <h1 className="stats">Statistics</h1>
+        <PieCharts data={this.generatePiechartData()} />
         <ul className="list-con">
           {recentMatches.map(each => (
             <MatchCard each={each} key={each.id} />
           ))}
         </ul>
+        <Link to="/" className="link-sty">
+          <button type="button" className="back-btn-style">
+            &larr; Back
+          </button>
+        </Link>
       </>
     )
   }
@@ -97,7 +121,7 @@ class TeamMatches extends Component {
         style={{backgroundColor: `${bgcolor}`}}
       >
         {isLoading ? (
-          <div testid="loader">
+          <div data-testid="loader">
             <Loader type="Oval" color="#ffffff" height={50} />
           </div>
         ) : (

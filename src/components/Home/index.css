@@ -24,4 +24,5 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 70%;
+  padding-left: 0;
 }

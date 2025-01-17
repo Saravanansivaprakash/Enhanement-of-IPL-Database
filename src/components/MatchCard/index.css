@@ -1,14 +1,13 @@
 .card-list-item {
   background-color: #1e293b;
   border-radius: 10px;
-  margin: 10px;
-  list-style-type: none;
-  padding-left: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  width: 250px;
+  height: 300px;
 }
 .list-logo {
   width: 30%;
@@ -24,10 +23,19 @@
   font-size: 14px;
   font-family: 'Bree Serif';
   color: #ffffff;
+  text-align: center;
 }
 
 .status {
   font-size: 14px;
   font-family: 'Bree Serif';
   color: #ffffff;
+}
+
+.won {
+  color: green;
+}
+
+.lost {
+  color: red;
 }

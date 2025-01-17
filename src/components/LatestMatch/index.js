@@ -31,6 +31,7 @@ const LatestMatch = props => {
             className="wiki-logo"
           />
         </div>
+        <hr className="separator-line" />
         <div className="match-detail">
           <h1 className="title-tag">First Innings</h1>
           <p>{firstInnings}</p>

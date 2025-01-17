@@ -19,8 +19,23 @@
   font-family: 'Bree Serif';
   font-size: 15px;
 }
+
+@media screen AND (max-width: 560px) {
+  .card-backgroud {
+    flex-direction: column;
+    padding: 0;
+  }
+  .competing-team-detail {
+    padding: 20px;
+  }
+}
+
 .competingname {
   font-size: 24px;
+}
+
+.separator-line {
+  display: none;
 }
 
 .wiki-logo {
@@ -36,4 +51,16 @@
 
 .title-tag {
   font-size: 15px;
+}
+
+@media screen AND (max-width: 560px) {
+  .separator-line {
+    display: block;
+    width: 100%;
+    color: #ffffff33;
+  }
+  .match-detail {
+    text-align: left;
+    padding: 20px;
+  }
 }

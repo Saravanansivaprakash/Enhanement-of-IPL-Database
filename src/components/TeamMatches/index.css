@@ -15,4 +15,32 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 15px;
+  padding-left: 0;
+  list-style: none;
+}
+.link-sty {
+  text-decoration: none;
+  align-self: flex-end;
+}
+.back-btn-style {
+  cursor: pointer;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: rgba(30, 0, 255, 0.929);
+  border-style: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 600;
+}
+.stats {
+  color: #ffffff;
+  font-family: 'Font-families';
+  font-size: 18px;
+  align-self: center;
 }
