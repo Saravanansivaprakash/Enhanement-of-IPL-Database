@@ -1,0 +1,27 @@
+.home-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainheading {
+  display: flex;
+}
+
+.ipl-logo {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.heading {
+  font-family: 'Bree Serif';
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.list-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 70%;
+}

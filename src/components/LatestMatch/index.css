@@ -1,0 +1,39 @@
+.latest-match-card {
+  color: #ffffff;
+  font-family: 'Font-families';
+  font-size: 18px;
+}
+
+.card-backgroud {
+  background-color: #0f172a;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+}
+
+.competing-team-detail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 15px;
+}
+.competingname {
+  font-size: 24px;
+}
+
+.wiki-logo {
+  width: 100px;
+}
+
+.match-detail {
+  text-align: right;
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 12px;
+}
+
+.title-tag {
+  font-size: 15px;
+}
